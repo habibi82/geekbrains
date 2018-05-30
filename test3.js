@@ -1,3 +1,15 @@
-/**
- * Created by MANE on 30.05.2018.
- */
+
+var a = Number(process.argv[2]);
+var b = Number(process.argv[3]);
+console.log(nod(a, b));
+
+
+function nod(n, m) {
+    if(m > 0) {
+        var k = n%m;
+        return nod(m, k);
+    }
+    else {
+        return Math.abs(n);
+    }
+}
